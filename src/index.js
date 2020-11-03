@@ -9,6 +9,7 @@ const button=document.querySelector('.button')
 const input = document.querySelector('[type="text"]')
 const ul = document.querySelector('.gallery')
 let page = 1;
+console.log(input);
 
 const inputHeder = function () {
    servis(input.value, page)  
@@ -52,5 +53,5 @@ const  scrolling = function () {
 }
  
 button.addEventListener('click', more)
-input.addEventListener('change', inputHeder)
 window.addEventListener('scroll', scrolling)
+input.addEventListener('change', inputHeder)
