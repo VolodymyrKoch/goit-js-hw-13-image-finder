@@ -1,0 +1,32 @@
+<li>
+  <div class="photo-card">
+    <img src="{{webformatURL}}" alt="img" width="300" />
+
+    <div class="stats">
+      <p class="stats-item">
+        <i class="material-icons">thumb_up</i>
+        {{likes}}
+      </p>
+      <p class="stats-item">
+        <i class="material-icons">visibility</i>
+        {{views}}
+      </p>
+      <p class="stats-item">
+        <i class="material-icons">comment</i>
+        {{comments}}
+      </p>
+      <p class="stats-item">
+        <i class="material-icons">cloud_download</i>
+        {{downloads}}
+      </p>
+    </div>
+  </div>
+</li>
+
+
+{{!-- webformatURL - посилання на маленьке зображення для списку карток
+largeImageURL - посилання на велике зображення (дивись пункт 'додатково')
+likes - кількість лайків
+views - кількість переглядів
+comments - кількість коментарів
+downloads - кількість завантажень --}}

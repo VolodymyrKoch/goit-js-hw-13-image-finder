@@ -1,0 +1,56 @@
+* html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+body {
+  margin: 0px;
+  font-family: roboto, sans-serif;
+  background-color: rgb(206, 206, 195);
+}
+.stats {
+  display: flex;
+}
+.stats-item {
+  margin-right: 10px;
+  text-align: center;
+}
+.photo-card {
+  border: solid 1px tan;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+li {
+  margin-right: 2px;
+}
+.is-hidden {
+  display: none;
+}
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 300px;
+  height: 20px;
+  padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
