@@ -5,8 +5,11 @@ import servis from './apiService.js';
 import { alert, notice, info, success, error } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 
+import * as basicLightbox from 'basiclightbox'
+// import 'basiclightbox/dist/basicLightbox.min.css'
+
 const button=document.querySelector('.button')
-const input = document.querySelector('[type="text"]')
+const input = document.querySelector('.input')
 const ul = document.querySelector('.gallery')
 let page = 1;
 
@@ -24,6 +27,7 @@ const inputHeder = function () {
     })
   ul.innerHTML = "";
 }
+
 let a = 100;
 let more = function () {
            window.scrollTo({
@@ -54,3 +58,24 @@ const  scrolling = function () {
 button.addEventListener('click', more)
 window.addEventListener('scroll', scrolling)
 input.addEventListener('change', inputHeder)
+
+let modal;
+document.querySelector('.gallery').onclick = (e) => {
+// console.log(e);
+  if (e.target.nodeName !== 'IMG') { 
+return
+  }
+  
+  modal = basicLightbox.create(`
+<img width="1400" height="900" src="${e.target.dataset.bigimg}">
+`);
+  modal.show()
+}
+
+document.onkeyup = function (event) {
+  // console.log(event.key);
+  if (event.key === 'Escape') {
+    modal.close()
+    //  console.log("ESKAPE");
+    }
+}
